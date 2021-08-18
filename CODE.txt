@@ -29,9 +29,9 @@ comp *chead, *ctail;
 
 void input(emp *p)
 {
-    cout << "\nEnter EmpNo. : ";
+    cout << "\n Enter EmpNo. : ";
     cin >> p->empno;
-    cout << "\nEnter Name : ";
+    cout << "\n Enter Name : ";
     cin >> p->name;
     cout << "\n Enter Salary : ";
     cin >> p->sal;
@@ -81,7 +81,7 @@ void myadd()
         ctail = tmp;
     }
 }
-
+                                        /*--------------PRINT-------------*/
 void print(emp *p)
 {
     cout << "\n Emp no : " << p->empno
@@ -129,11 +129,11 @@ void mylist()
         {
             if (strcmp(j, tmp->job) == 0)
             {
-                cout << "\n Job : " << tmp->job;
+                cout << "\n Job : " << tmp->job<<"\n";
                 for (t = tmp->head; t != NULL; t = t->next)
                 {
                     print(t);
-                    break;
+
                 }
             }
 
@@ -347,12 +347,13 @@ void myins()
 int main()
 {
     int ch;
-    chead = NULL;
+    chead =ctail= NULL;
 
     while (1)
     {
-        cout << "\n 1 add \n 2 list \n 3 Delete \n 4 insert \n exit \n enter choice:";
+        cout << "\nPress: \n    1> add \n    2> list \n    3> Delete \n    4> insert \n    5> exit \n Enter choice:";
         cin >> ch;
+        cout <<"\n";
 
         switch (ch)
         {
@@ -370,6 +371,8 @@ int main()
             break;
         case 5:
             exit(1);
+        default :
+            cout<<"INVALID INPUT";
         }
     }
     return 0;
