@@ -342,7 +342,7 @@ void myins()
         cout << "\n Job is not present in the list";
 }
 
-
+                                        /*--------------MAIN FUNCTION-------------*/
 
 int main()
 {
